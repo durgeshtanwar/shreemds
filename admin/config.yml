@@ -1,0 +1,83 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Media files will be stored in the repo
+media_folder: "images"
+
+# Collections define the structure of your content
+collections:
+  # Homepage settings
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "_data/home.json"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
+          - { label: "CTA Button Text", name: "cta_text", widget: "string" }
+
+  # Products
+  - name: "products"
+    label: "Products"
+    folder: "_data/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Bhujia", "Mixture", "Sweets", "Combo Pack"] }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+
+  # Testimonials
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "_data/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Customer Name", name: "name", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Review", name: "review", widget: "text" }
+      - { label: "Rating", name: "rating", widget: "number", min: 1, max: 5, default: 5 }
+
+  # Blog Posts
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+
+  # Team Members
+  - name: "team"
+    label: "Team"
+    folder: "_data/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Bio", name: "bio", widget: "text" }
+
+  # FAQ
+  - name: "faq"
+    label: "FAQ"
+    folder: "_data/faq"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Question", name: "question", widget: "string" }
+      - { label: "Answer", name: "answer", widget: "text" }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
