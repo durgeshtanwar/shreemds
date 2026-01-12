@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Products – Shree MDS Foods | Bikaner's Famous Namkeen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore our range of authentic Bikaneri Bhujia, namkeen, and snacks. Traditional recipes with premium quality ingredients.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- GSAP -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="scrolled">
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="Shree MDS Logo" width="79" height="60" style="height: 60px; width: auto;">
+  </a>
+  
+  <!-- Hamburger Menu Button -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- PRODUCTS HERO -->
+<section class="products-hero">
+  <div class="products-hero-content">
+    <span class="tag">Our Collection</span>
+    <h1>Authentic <em>Bikaneri</em> Namkeen</h1>
+    <p>Handcrafted with traditional recipes and premium ingredients from the heart of Rajasthan</p>
+  </div>
+</section>
+
+<!-- PRODUCT CATEGORIES -->
+<section class="section products-categories">
+  <h2>Product Categories</h2>
+  <div class="category-tabs">
+    <button class="category-tab active" data-category="all">All Products</button>
+    <button class="category-tab" data-category="bhujia">Bhujia</button>
+    <button class="category-tab" data-category="namkeen">Namkeen</button>
+    <button class="category-tab" data-category="combos">Combo Packs</button>
+  </div>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="section products-grid-section">
+  <div class="products-grid">
+    
+    <!-- Product 1 -->
+    <div class="product-card" data-category="bhujia">
+      <span class="badge bestseller">⭐ Best Seller</span>
+      <div class="product-image">
+        <img src="images/2.png" alt="Bikaneri Bhujia" width="300" height="300">
+      </div>
+      <div class="product-info">
+        <h3>Bikaneri Bhujia</h3>
+        <p class="product-desc">The authentic crispy bhujia with traditional Bikaner spices. Made with moth flour and premium ingredients.</p>
+        <div class="product-rating">⭐⭐⭐⭐⭐ <span>4.9 (250+ reviews)</span></div>
+        <div class="product-sizes">
+          <span class="size-tag">200g</span>
+          <span class="size-tag">400g</span>
+          <span class="size-tag">1kg</span>
+        </div>
+        <div class="product-price">
+          <span class="price">Starting ₹60</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card" data-category="namkeen">
+      <span class="badge popular">🔥 Popular</span>
+      <div class="product-image">
+        <img src="images/3.png" alt="All In One" width="300" height="300">
+      </div>
+      <div class="product-info">
+        <h3>All In One Mixture</h3>
+        <p class="product-desc">A perfect mix of nuts, sev, and crunchy namkeen varieties. Ideal for parties and gatherings.</p>
+        <div class="product-rating">⭐⭐⭐⭐⭐ <span>4.8 (180+ reviews)</span></div>
+        <div class="product-sizes">
+          <span class="size-tag">200g</span>
+          <span class="size-tag">400g</span>
+          <span class="size-tag">1kg</span>
+        </div>
+        <div class="product-price">
+          <span class="price">Starting ₹75</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card" data-category="bhujia">
+      <span class="badge new">✨ New</span>
+      <div class="product-image">
+        <img src="images/4.png" alt="Nimbu Bhujia" width="300" height="300">
+      </div>
+      <div class="product-info">
+        <h3>Nimbu Bhujia</h3>
+        <p class="product-desc">Tangy lemon-flavoured bhujia with a refreshing twist. Perfect for those who love citrus flavors.</p>
+        <div class="product-rating">⭐⭐⭐⭐⭐ <span>4.7 (120+ reviews)</span></div>
+        <div class="product-sizes">
+          <span class="size-tag">200g</span>
+          <span class="size-tag">400g</span>
+        </div>
+        <div class="product-price">
+          <span class="price">Starting ₹55</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card" data-category="bhujia">
+      <span class="badge bestseller">⭐ Best Seller</span>
+      <div class="product-image">
+        <img src="images/5.png" alt="Khokha Bhujia" width="300" height="300">
+      </div>
+      <div class="product-info">
+        <h3>Khokha Bhujia</h3>
+        <p class="product-desc">Thick, crunchy bhujia with bold masala flavours. A traditional favorite from Bikaner.</p>
+        <div class="product-rating">⭐⭐⭐⭐⭐ <span>4.9 (200+ reviews)</span></div>
+        <div class="product-sizes">
+          <span class="size-tag">200g</span>
+          <span class="size-tag">400g</span>
+          <span class="size-tag">1kg</span>
+        </div>
+        <div class="product-price">
+          <span class="price">Starting ₹65</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card" data-category="namkeen">
+      <div class="product-image">
+        <img src="images/6.png" alt="Special Namkeen" width="300" height="300">
+      </div>
+      <div class="product-info">
+        <h3>Special Namkeen</h3>
+        <p class="product-desc">Premium quality namkeen with a unique blend of spices and ingredients.</p>
+        <div class="product-rating">⭐⭐⭐⭐⭐ <span>4.6 (90+ reviews)</span></div>
+        <div class="product-sizes">
+          <span class="size-tag">200g</span>
+          <span class="size-tag">400g</span>
+        </div>
+        <div class="product-price">
+          <span class="price">Starting ₹70</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card" data-category="combos">
+      <span class="badge popular">🔥 Popular</span>
+      <div class="product-image">
+        <img src="images/7.png" alt="Combo Pack 1" width="300" height="300">
+      </div>
+      <div class="product-info">
+        <h3>Family Combo Pack</h3>
+        <p class="product-desc">Perfect for family gatherings! Includes Bhujia, All In One, and Nimbu Bhujia.</p>
+        <div class="product-rating">⭐⭐⭐⭐⭐ <span>4.9 (150+ reviews)</span></div>
+        <div class="product-sizes">
+          <span class="size-tag">1.2kg</span>
+        </div>
+        <div class="product-price">
+          <span class="price">₹299</span>
+          <span class="original-price">₹350</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card" data-category="combos">
+      <div class="product-image">
+        <img src="images/8.png" alt="Combo Pack 2" width="300" height="300">
+      </div>
+      <div class="product-info">
+        <h3>Festival Special Pack</h3>
+        <p class="product-desc">Celebrate with our festive combo! Perfect for Diwali, Holi, and special occasions.</p>
+        <div class="product-rating">⭐⭐⭐⭐⭐ <span>4.8 (100+ reviews)</span></div>
+        <div class="product-sizes">
+          <span class="size-tag">2kg</span>
+        </div>
+        <div class="product-price">
+          <span class="price">₹499</span>
+          <span class="original-price">₹599</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-card" data-category="namkeen">
+      <span class="badge new">✨ New</span>
+      <div class="product-image">
+        <img src="images/1.png" alt="Premium Namkeen" width="300" height="300">
+      </div>
+      <div class="product-info">
+        <h3>Premium Papad</h3>
+        <p class="product-desc">Crispy, flavorful papad made with traditional Bikaner recipe. Perfect accompaniment.</p>
+        <div class="product-rating">⭐⭐⭐⭐⭐ <span>4.7 (80+ reviews)</span></div>
+        <div class="product-sizes">
+          <span class="size-tag">200g</span>
+          <span class="size-tag">500g</span>
+        </div>
+        <div class="product-price">
+          <span class="price">Starting ₹50</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BULK ORDER CTA -->
+<section class="bulk-order-section">
+  <div class="bulk-order-content">
+    <h2>Need Bulk Orders?</h2>
+    <p>We offer special pricing for wholesale orders, weddings, corporate events, and festivals. Get in touch with us for customized packaging and pricing.</p>
+    <a href="contact.html" class="btn">Contact for Bulk Orders</a>
+  </div>
+</section>
+
+<!-- Footer (loaded dynamically) -->
+<div id="footer-container"></div>
+
+<script src="partials.js"></script>
+<script src="script.js"></script>
+
+<script>
+// Product category filter
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.category-tab');
+  const products = document.querySelectorAll('.product-card');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Update active tab
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      const category = tab.dataset.category;
+      
+      // Filter products
+      products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+          product.style.display = 'block';
+          gsap.from(product, { opacity: 0, y: 20, duration: 0.5 });
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

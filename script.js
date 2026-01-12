@@ -8,6 +8,29 @@ document.addEventListener("DOMContentLoaded", () => {
       if (window.scrollY > 50) nav.classList.add("scrolled");
       else nav.classList.remove("scrolled");
     }
+    
+    // Back to top button visibility
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+  });
+  
+  // Back to top smooth scroll with GSAP (using event delegation for dynamically loaded content)
+  document.addEventListener('click', (e) => {
+    const backToTopBtn = e.target.closest('#backToTop');
+    if (backToTopBtn) {
+      e.preventDefault();
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: 0, autoKill: false },
+        ease: "power3.inOut"
+      });
+    }
   });
 
   /* HAMBURGER MENU */

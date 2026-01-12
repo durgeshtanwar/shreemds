@@ -12,6 +12,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<!-- GSAP -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
 </head>
 
 <body>
@@ -19,11 +24,19 @@
 <!-- NAVIGATION -->
 <nav id="navbar" class="scrolled">
   <a href="index.html" class="logo">
-    <img src="images/logo.png" alt="Shree MDS Logo">
+    <img src="images/logo.png" alt="Shree MDS Logo" width="79" height="60" style="height: 60px; width: auto;">
   </a>
-  <div class="nav-links">
+  
+  <!-- Hamburger Menu Button -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  
+  <div class="nav-links" id="nav-links">
     <a href="index.html">Home</a>
-    <a href="#">Products</a>
+    <a href="products.html">Products</a>
     <a href="about.html" class="active">About</a>
     <a href="contact.html">Contact</a>
   </div>
@@ -300,86 +313,10 @@
   <a href="index.html#products" class="btn">Explore Products</a>
 </section>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <!-- Decorative Fort Silhouette -->
-  <div class="footer-decoration">
-    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" class="fort-silhouette">
-      <defs>
-        <pattern id="fortPattern" x="0" y="0" width="360" height="200" patternUnits="userSpaceOnUse">
-          <rect x="0" y="140" width="360" height="60" fill="#8b3a3a"/>
-          <rect x="10" y="80" width="50" height="120" fill="#8b3a3a"/>
-          <ellipse cx="35" cy="80" rx="30" ry="20" fill="#8b3a3a"/>
-          <rect x="30" y="55" width="10" height="25" fill="#8b3a3a"/>
-          <circle cx="35" cy="50" r="8" fill="#8b3a3a"/>
-          <rect x="70" y="110" width="30" height="90" fill="#8b3a3a"/>
-          <polygon points="70,110 85,90 100,110" fill="#8b3a3a"/>
-          <rect x="120" y="70" width="120" height="130" fill="#8b3a3a"/>
-          <ellipse cx="180" cy="70" rx="50" ry="35" fill="#8b3a3a"/>
-          <rect x="175" y="25" width="10" height="45" fill="#8b3a3a"/>
-          <circle cx="180" cy="20" r="10" fill="#8b3a3a"/>
-          <ellipse cx="150" cy="120" rx="12" ry="18" fill="#6d2d2d"/>
-          <ellipse cx="180" cy="120" rx="12" ry="18" fill="#6d2d2d"/>
-          <ellipse cx="210" cy="120" rx="12" ry="18" fill="#6d2d2d"/>
-          <rect x="260" y="110" width="30" height="90" fill="#8b3a3a"/>
-          <polygon points="260,110 275,90 290,110" fill="#8b3a3a"/>
-          <rect x="300" y="80" width="50" height="120" fill="#8b3a3a"/>
-          <ellipse cx="325" cy="80" rx="30" ry="20" fill="#8b3a3a"/>
-          <rect x="320" y="55" width="10" height="25" fill="#8b3a3a"/>
-          <circle cx="325" cy="50" r="8" fill="#8b3a3a"/>
-          <rect x="60" y="135" width="10" height="8" fill="#8b3a3a"/>
-          <rect x="100" y="135" width="10" height="8" fill="#8b3a3a"/>
-          <rect x="250" y="135" width="10" height="8" fill="#8b3a3a"/>
-          <rect x="290" y="135" width="10" height="8" fill="#8b3a3a"/>
-        </pattern>
-      </defs>
-      <rect width="1440" height="200" fill="url(#fortPattern)"/>
-    </svg>
-  </div>
-  
-  <div class="footer-content">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3>About Us</h3>
-        <p>Welcome to Shree MDS Foods, the leading manufacturer and wholesaler of authentic Bikaneri Namkeen and snacks.</p>
-        <a href="about.html" class="footer-btn">Learn More</a>
-      </div>
-      
-      <div class="footer-col">
-        <h3>Our Products</h3>
-        <ul>
-          <li><a href="#">Bikaneri Bhujia</a></li>
-          <li><a href="#">Aloo Bhujia</a></li>
-          <li><a href="#">All In One Mixture</a></li>
-          <li><a href="#">Combo Packs</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h3>Contact Us</h3>
-        <ul class="contact-list">
-          <li><span class="icon">📞</span><span>+91 - XXXXXXXXXX</span></li>
-          <li><span class="icon">📧</span><span>info@shreemdsfoods.com</span></li>
-          <li><span class="icon">📍</span><span>Bikaner, Rajasthan, India</span></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2024 Shree MDS Foods. All Rights Reserved. | Made with ❤️ in Bikaner</p>
-    </div>
-  </div>
-</footer>
+<!-- Footer (loaded dynamically) -->
+<div id="footer-container"></div>
 
+<script src="partials.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
