@@ -22,8 +22,18 @@
 
 <!-- NAVIGATION -->
 <nav id="navbar">
-  <div class="logo">Shree MDS</div>
-  <div class="nav-links">
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="Shree MDS Logo">
+  </a>
+  
+  <!-- Hamburger Menu Button -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  
+  <div class="nav-links" id="nav-links">
     <a href="index.html">Home</a>
     <a href="#">Products</a>
     <a href="about.html">About</a>
@@ -135,10 +145,50 @@
 <section class="section best-sellers">
   <h2>Best Sellers</h2>
   <div class="products">
-    <div class="card"><img src="images/2.png" width="500" height="500"><h3>Bikaneri Bhujia</h3></div>
-    <div class="card"><img src="images/3.png" width="500" height="500"><h3>All In One</h3></div>
-    <div class="card"><img src="images/4.png" width="500" height="500"><h3>Nimbu Bhujia</h3></div>
-    <div class="card"><img src="images/5.png" width="500" height="500"><h3>Khokha Bhujia</h3></div>
+    <div class="card">
+      <span class="badge bestseller">⭐ Best Seller</span>
+      <img src="images/2.png" width="500" height="500">
+      <h3>Bikaneri Bhujia</h3>
+      <p class="card-desc">The authentic crispy bhujia with traditional Bikaner spices</p>
+      <div class="card-rating">⭐⭐⭐⭐⭐ <span>4.9 (250+)</span></div>
+      <div class="card-price">
+        <span class="price">₹120</span>
+        <span class="weight">400g</span>
+      </div>
+    </div>
+    <div class="card">
+      <span class="badge popular">🔥 Popular</span>
+      <img src="images/3.png" width="500" height="500">
+      <h3>All In One</h3>
+      <p class="card-desc">A perfect mix of nuts, sev, and crunchy namkeen varieties</p>
+      <div class="card-rating">⭐⭐⭐⭐⭐ <span>4.8 (180+)</span></div>
+      <div class="card-price">
+        <span class="price">₹150</span>
+        <span class="weight">400g</span>
+      </div>
+    </div>
+    <div class="card">
+      <span class="badge new">✨ New</span>
+      <img src="images/4.png" width="500" height="500">
+      <h3>Nimbu Bhujia</h3>
+      <p class="card-desc">Tangy lemon-flavoured bhujia with a refreshing twist</p>
+      <div class="card-rating">⭐⭐⭐⭐⭐ <span>4.7 (120+)</span></div>
+      <div class="card-price">
+        <span class="price">₹110</span>
+        <span class="weight">400g</span>
+      </div>
+    </div>
+    <div class="card">
+      <span class="badge bestseller">⭐ Best Seller</span>
+      <img src="images/5.png" width="500" height="500">
+      <h3>Khokha Bhujia</h3>
+      <p class="card-desc">Thick, crunchy bhujia with bold masala flavours</p>
+      <div class="card-rating">⭐⭐⭐⭐⭐ <span>4.9 (200+)</span></div>
+      <div class="card-price">
+        <span class="price">₹130</span>
+        <span class="weight">400g</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -257,131 +307,10 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <!-- Decorative Fort Silhouette -->
-  <div class="footer-decoration">
-    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" class="fort-silhouette">
-      <!-- Main Fort Structure -->
-      <defs>
-        <pattern id="fortPattern" x="0" y="0" width="360" height="200" patternUnits="userSpaceOnUse">
-          <!-- Fort Base Wall -->
-          <rect x="0" y="140" width="360" height="60" fill="#8b3a3a"/>
-          
-          <!-- Left Tower with Dome -->
-          <rect x="10" y="80" width="50" height="120" fill="#8b3a3a"/>
-          <ellipse cx="35" cy="80" rx="30" ry="20" fill="#8b3a3a"/>
-          <rect x="30" y="55" width="10" height="25" fill="#8b3a3a"/>
-          <circle cx="35" cy="50" r="8" fill="#8b3a3a"/>
-          
-          <!-- Left Small Tower -->
-          <rect x="70" y="110" width="30" height="90" fill="#8b3a3a"/>
-          <polygon points="70,110 85,90 100,110" fill="#8b3a3a"/>
-          
-          <!-- Center Palace with Large Dome -->
-          <rect x="120" y="70" width="120" height="130" fill="#8b3a3a"/>
-          <ellipse cx="180" cy="70" rx="50" ry="35" fill="#8b3a3a"/>
-          <rect x="175" y="25" width="10" height="45" fill="#8b3a3a"/>
-          <circle cx="180" cy="20" r="10" fill="#8b3a3a"/>
-          
-          <!-- Arched Windows -->
-          <ellipse cx="150" cy="120" rx="12" ry="18" fill="#6d2d2d"/>
-          <ellipse cx="180" cy="120" rx="12" ry="18" fill="#6d2d2d"/>
-          <ellipse cx="210" cy="120" rx="12" ry="18" fill="#6d2d2d"/>
-          
-          <!-- Right Small Tower -->
-          <rect x="260" y="110" width="30" height="90" fill="#8b3a3a"/>
-          <polygon points="260,110 275,90 290,110" fill="#8b3a3a"/>
-          
-          <!-- Right Tower with Dome -->
-          <rect x="300" y="80" width="50" height="120" fill="#8b3a3a"/>
-          <ellipse cx="325" cy="80" rx="30" ry="20" fill="#8b3a3a"/>
-          <rect x="320" y="55" width="10" height="25" fill="#8b3a3a"/>
-          <circle cx="325" cy="50" r="8" fill="#8b3a3a"/>
-          
-          <!-- Battlements (Merlons) on walls -->
-          <rect x="60" y="135" width="10" height="8" fill="#8b3a3a"/>
-          <rect x="100" y="135" width="10" height="8" fill="#8b3a3a"/>
-          <rect x="250" y="135" width="10" height="8" fill="#8b3a3a"/>
-          <rect x="290" y="135" width="10" height="8" fill="#8b3a3a"/>
-        </pattern>
-      </defs>
-      <rect width="1440" height="200" fill="url(#fortPattern)"/>
-    </svg>
-  </div>
-  
-  <div class="footer-content">
-    <div class="footer-grid">
-      <!-- About Us -->
-      <div class="footer-col">
-        <h3>About Us</h3>
-        <p>Welcome to Shree MDS Foods, the leading manufacturer and wholesaler of authentic Bikaneri Namkeen and snacks. Since generations, we have been dedicated to providing our customers with the most authentic and delicious snacks.</p>
-        <a href="#" class="footer-btn">Learn More</a>
-      </div>
-      
-      <!-- Our Products -->
-      <div class="footer-col">
-        <h3>Our Products</h3>
-        <ul>
-          <li><a href="#">Bikaneri Bhujia</a></li>
-          <li><a href="#">Aloo Bhujia</a></li>
-          <li><a href="#">All In One Mixture</a></li>
-          <li><a href="#">Khokha Bhujia</a></li>
-          <li><a href="#">Combo Packs</a></li>
-        </ul>
-        <div class="marketplace-icons">
-          <span>Shop On:</span>
-          <a href="#" title="Amazon">🛒</a>
-          <a href="#" title="Flipkart">🛍️</a>
-        </div>
-      </div>
-      
-      <!-- Contact Us -->
-      <div class="footer-col">
-        <h3>Contact Us</h3>
-        <ul class="contact-list">
-          <li>
-            <span class="icon">📞</span>
-            <span>+91 - XXXXXXXXXX</span>
-          </li>
-          <li>
-            <span class="icon">📧</span>
-            <span>info@shreemdsfoods.com</span>
-          </li>
-          <li>
-            <span class="icon">📍</span>
-            <span>Bikaner, Rajasthan, India</span>
-          </li>
-        </ul>
-        <div class="social-icons">
-          <span>Follow Us:</span>
-          <a href="#" title="Instagram">📸</a>
-          <a href="#" title="Facebook">📘</a>
-          <a href="#" title="WhatsApp">💬</a>
-        </div>
-      </div>
-      
-      <!-- Quick Links -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <!-- Copyright -->
-    <div class="footer-bottom">
-      <p>&copy; 2024 Shree MDS Foods. All Rights Reserved. | Made with ❤️ in Bikaner</p>
-    </div>
-  </div>
-</footer>
+<!-- Footer (loaded dynamically) -->
+<div id="footer-container"></div>
 
+<script src="partials.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

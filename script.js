@@ -4,9 +4,63 @@ document.addEventListener("DOMContentLoaded", () => {
   /* NAVBAR SCROLL EFFECT */
   window.addEventListener("scroll", () => {
     const nav = document.getElementById("navbar");
-    if (window.scrollY > 50) nav.classList.add("scrolled");
-    else nav.classList.remove("scrolled");
+    if (nav) {
+      if (window.scrollY > 50) nav.classList.add("scrolled");
+      else nav.classList.remove("scrolled");
+    }
   });
+
+  /* HAMBURGER MENU */
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  
+  if (hamburger && navLinks) {
+    // Create overlay element
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+    }
+    
+    // Function to close menu
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+    
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.contains('active');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        hamburger.classList.add('active');
+        navLinks.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+    
+    // Close menu on overlay click
+    overlay.addEventListener('click', closeMenu);
+    
+    // Close menu on nav link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+    
+    // Reset on window resize (for desktop)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        closeMenu();
+      }
+    });
+  }
 
   /* HERO SLIDER LOGIC */
   const slides = document.querySelectorAll(".slide");
