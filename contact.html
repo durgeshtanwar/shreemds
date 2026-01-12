@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us – Shree MDS Foods | Bikaner's Famous Namkeen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Shree MDS Foods for orders, inquiries, and wholesale partnerships. We're here to help with authentic Bikaneri Bhujia and namkeen.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<!-- Netlify Identity Widget -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="scrolled">
+  <div class="logo">Shree MDS</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="#">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<!-- CONTACT HERO -->
+<section class="contact-hero">
+  <div class="contact-hero-content">
+    <span class="tag">Get In Touch</span>
+    <h1>We'd Love to <em>Hear</em> From You</h1>
+    <p>Have questions about our products? Want to place a bulk order? We're here to help!</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section contact-section">
+  <div class="contact-grid">
+    
+    <!-- Contact Form -->
+    <div class="contact-form-container">
+      <h2>Send Us a Message</h2>
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Replace with your Web3Forms access key -->
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New Contact from Shree MDS Website">
+        
+        <!-- Honeypot Spam Protection -->
+        <input type="checkbox" name="botcheck" style="display: none;">
+        
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <select id="subject" name="inquiry_type" required>
+            <option value="">Select a subject</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Product Information">Product Information</option>
+            <option value="Bulk Order">Bulk Order / Wholesale</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+    
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p class="contact-intro">Reach out to us through any of the following channels. We typically respond within 24 hours.</p>
+      
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="info-icon">📞</div>
+          <h3>Phone</h3>
+          <p>+91 - XXXXXXXXXX</p>
+          <span class="info-note">Mon-Sat, 9AM-6PM</span>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">📧</div>
+          <h3>Email</h3>
+          <p>info@shreemdsfoods.com</p>
+          <span class="info-note">We reply within 24 hours</span>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <h3>Address</h3>
+          <p>Bikaner, Rajasthan<br>India - 334001</p>
+          <span class="info-note">Visit our facility</span>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>+91 - XXXXXXXXXX</p>
+          <span class="info-note">Quick responses</span>
+        </div>
+      </div>
+      
+      <!-- Social Links -->
+      <div class="social-links">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon" title="Instagram">📸</a>
+          <a href="#" class="social-icon" title="Facebook">📘</a>
+          <a href="#" class="social-icon" title="YouTube">📺</a>
+          <a href="#" class="social-icon" title="WhatsApp">💬</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- MAP SECTION (Optional - Add Google Map) -->
+<section class="map-section">
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113853.30679882051!2d73.25441929999999!3d28.0229348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393f4ef0e88f9657%3A0x4b5a84d15fd08d4!2sBikaner%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1704979200000!5m2!1sen!2sin"
+      width="100%" 
+      height="400" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <!-- Decorative Fort Silhouette -->
+  <div class="footer-decoration">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" class="fort-silhouette">
+      <defs>
+        <pattern id="fortPattern" x="0" y="0" width="360" height="200" patternUnits="userSpaceOnUse">
+          <rect x="0" y="140" width="360" height="60" fill="#8b3a3a"/>
+          <rect x="10" y="80" width="50" height="120" fill="#8b3a3a"/>
+          <ellipse cx="35" cy="80" rx="30" ry="20" fill="#8b3a3a"/>
+          <rect x="30" y="55" width="10" height="25" fill="#8b3a3a"/>
+          <circle cx="35" cy="50" r="8" fill="#8b3a3a"/>
+          <rect x="70" y="110" width="30" height="90" fill="#8b3a3a"/>
+          <polygon points="70,110 85,90 100,110" fill="#8b3a3a"/>
+          <rect x="120" y="70" width="120" height="130" fill="#8b3a3a"/>
+          <ellipse cx="180" cy="70" rx="50" ry="35" fill="#8b3a3a"/>
+          <rect x="175" y="25" width="10" height="45" fill="#8b3a3a"/>
+          <circle cx="180" cy="20" r="10" fill="#8b3a3a"/>
+          <ellipse cx="150" cy="120" rx="12" ry="18" fill="#6d2d2d"/>
+          <ellipse cx="180" cy="120" rx="12" ry="18" fill="#6d2d2d"/>
+          <ellipse cx="210" cy="120" rx="12" ry="18" fill="#6d2d2d"/>
+          <rect x="260" y="110" width="30" height="90" fill="#8b3a3a"/>
+          <polygon points="260,110 275,90 290,110" fill="#8b3a3a"/>
+          <rect x="300" y="80" width="50" height="120" fill="#8b3a3a"/>
+          <ellipse cx="325" cy="80" rx="30" ry="20" fill="#8b3a3a"/>
+          <rect x="320" y="55" width="10" height="25" fill="#8b3a3a"/>
+          <circle cx="325" cy="50" r="8" fill="#8b3a3a"/>
+          <rect x="60" y="135" width="10" height="8" fill="#8b3a3a"/>
+          <rect x="100" y="135" width="10" height="8" fill="#8b3a3a"/>
+          <rect x="250" y="135" width="10" height="8" fill="#8b3a3a"/>
+          <rect x="290" y="135" width="10" height="8" fill="#8b3a3a"/>
+        </pattern>
+      </defs>
+      <rect width="1440" height="200" fill="url(#fortPattern)"/>
+    </svg>
+  </div>
+  
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>Welcome to Shree MDS Foods, the leading manufacturer and wholesaler of authentic Bikaneri Namkeen and snacks.</p>
+        <a href="about.html" class="footer-btn">Learn More</a>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul>
+          <li><a href="#">Bikaneri Bhujia</a></li>
+          <li><a href="#">Aloo Bhujia</a></li>
+          <li><a href="#">All In One Mixture</a></li>
+          <li><a href="#">Combo Packs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="contact-list">
+          <li><span class="icon">📞</span><span>+91 - XXXXXXXXXX</span></li>
+          <li><span class="icon">📧</span><span>info@shreemdsfoods.com</span></li>
+          <li><span class="icon">📍</span><span>Bikaner, Rajasthan, India</span></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Shree MDS Foods. All Rights Reserved. | Made with ❤️ in Bikaner</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ media_folder: "images"
 
 # Collections define the structure of your content
 collections:
-  # Homepage settings
+  # Page settings
   - name: "pages"
     label: "Pages"
     files:
@@ -18,6 +18,17 @@ collections:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
           - { label: "CTA Button Text", name: "cta_text", widget: "string" }
+      - label: "Contact Page"
+        name: "contact"
+        file: "data/contact.json"
+        fields:
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Working Hours", name: "hours", widget: "string" }
 
   # Products
   - name: "products"
