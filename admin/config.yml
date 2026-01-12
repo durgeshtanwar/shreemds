@@ -13,7 +13,7 @@ collections:
     files:
       - label: "Homepage"
         name: "home"
-        file: "_data/home.json"
+        file: "data/home.json"
         fields:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
@@ -22,7 +22,7 @@ collections:
   # Products
   - name: "products"
     label: "Products"
-    folder: "_data/products"
+    folder: "data/products"
     create: true
     slug: "{{slug}}"
     fields:
@@ -36,7 +36,7 @@ collections:
   # Testimonials
   - name: "testimonials"
     label: "Testimonials"
-    folder: "_data/testimonials"
+    folder: "data/testimonials"
     create: true
     slug: "{{slug}}"
     fields:
@@ -48,7 +48,7 @@ collections:
   # Blog Posts
   - name: "blog"
     label: "Blog"
-    folder: "_posts"
+    folder: "blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -62,7 +62,7 @@ collections:
   # Team Members
   - name: "team"
     label: "Team"
-    folder: "_data/team"
+    folder: "data/team"
     create: true
     slug: "{{slug}}"
     fields:
@@ -74,7 +74,7 @@ collections:
   # FAQ
   - name: "faq"
     label: "FAQ"
-    folder: "_data/faq"
+    folder: "data/faq"
     create: true
     slug: "{{slug}}"
     fields:

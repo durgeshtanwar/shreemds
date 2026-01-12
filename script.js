@@ -171,4 +171,70 @@ document.addEventListener("DOMContentLoaded", () => {
     y: 30,
     duration: 1
   });
+
+  /* ========== CMS DATA LOADING ========== */
+  
+  // Load Homepage Data
+  async function loadHomeData() {
+    try {
+      const response = await fetch('/data/home.json');
+      if (!response.ok) return;
+      const data = await response.json();
+      
+      // Update hero section (first slide as example)
+      const heroTitle = document.querySelector('.slide.active .hero-content h1');
+      const heroSubtitle = document.querySelector('.slide.active .hero-content p');
+      
+      if (heroTitle && data.hero_title) heroTitle.textContent = data.hero_title;
+      if (heroSubtitle && data.hero_subtitle) heroSubtitle.textContent = data.hero_subtitle;
+    } catch (e) {
+      console.log('Home data not loaded:', e);
+    }
+  }
+
+  // Load Testimonials
+  async function loadTestimonials() {
+    try {
+      const container = document.querySelector('.testimonials-grid');
+      if (!container) return;
+      
+      // Fetch testimonials index or individual files
+      const files = ['rajesh-kumar']; // Add more filenames as they're created
+      const testimonials = [];
+      
+      for (const file of files) {
+        try {
+          const response = await fetch(`/data/testimonials/${file}.json`);
+          if (response.ok) {
+            testimonials.push(await response.json());
+          }
+        } catch (e) {}
+      }
+      
+      // If we have CMS testimonials, update the display
+      if (testimonials.length > 0) {
+        console.log('Testimonials loaded:', testimonials);
+      }
+    } catch (e) {
+      console.log('Testimonials not loaded:', e);
+    }
+  }
+
+  // Load Products (for future products page)
+  async function loadProducts() {
+    try {
+      const response = await fetch('/data/products/bikaneri-bhujia.json');
+      if (!response.ok) return;
+      const data = await response.json();
+      console.log('Products loaded:', data);
+    } catch (e) {
+      console.log('Products not loaded:', e);
+    }
+  }
+
+  // Initialize CMS Data
+  loadHomeData();
+  loadTestimonials();
+  loadProducts();
+
 });
