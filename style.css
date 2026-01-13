@@ -146,7 +146,6 @@ nav.scrolled .logo img {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  /* background: radial-gradient(circle at 70% 50%, #ff9f43, #ee5253);  Removed for dynamic backgrounds */
 }
 .slide {
   position: absolute;
@@ -157,7 +156,7 @@ nav.scrolled .logo img {
   padding: 0 8%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s ease, visibility 1s; /* Fallback */
+  transition: opacity 1s ease, visibility 1s;
 }
 .slide::before {
   display: none;
@@ -165,6 +164,50 @@ nav.scrolled .logo img {
 
 /* Active slide handled by GSAP, but fallback here */
 .slide.active { opacity: 1; visibility: visible; z-index: 1; }
+
+/* ---------- PARALLAX FLOATING ELEMENTS ---------- */
+.parallax-elements {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.float-element {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: float-bounce 6s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+/* Position each element differently */
+.float-element:nth-child(1) { top: 15%; left: 5%; animation-delay: 0s; font-size: 2.5rem; }
+.float-element:nth-child(2) { top: 60%; left: 8%; animation-delay: 1s; font-size: 1.8rem; }
+.float-element:nth-child(3) { top: 25%; right: 10%; animation-delay: 2s; font-size: 2.2rem; }
+.float-element:nth-child(4) { top: 70%; right: 5%; animation-delay: 0.5s; font-size: 1.5rem; }
+.float-element:nth-child(5) { top: 40%; left: 3%; animation-delay: 1.5s; font-size: 1.6rem; }
+.float-element:nth-child(6) { top: 80%; left: 12%; animation-delay: 2.5s; font-size: 1.4rem; }
+.float-element:nth-child(7) { top: 50%; right: 3%; animation-delay: 3s; font-size: 2rem; }
+.float-element:nth-child(8) { top: 10%; right: 15%; animation-delay: 0.8s; font-size: 1.7rem; }
+
+@keyframes float-bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+}
 
 .hero-content {
   position: relative;
@@ -1522,6 +1565,153 @@ nav.scrolled .logo img {
   
   .bulk-order-section h2 {
     font-size: 1.8rem;
+  }
+}
+
+/* ---------- DISTRIBUTOR SECTION ---------- */
+.distributor-section {
+  position: relative;
+  background: url('../images/footer-decoration.png') center/cover no-repeat;
+}
+
+.distributor-bg {
+  display: none;
+}
+
+.distributor-overlay {
+  background: linear-gradient(135deg, rgba(92, 42, 42, 0.75), rgba(139, 58, 58, 0.7));
+  padding: 80px 8%;
+}
+
+.distributor-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.distributor-info {
+  color: #fff;
+}
+
+.distributor-info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.distributor-info h2 em {
+  color: var(--secondary);
+}
+
+.distributor-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.distributor-benefits {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.distributor-benefits li {
+  font-size: 0.95rem;
+  padding: 8px 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.distributor-form-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.distributor-form-container h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.distributor-form .form-group {
+  margin-bottom: 15px;
+}
+
+.distributor-form input,
+.distributor-form select,
+.distributor-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s;
+  background: #fff;
+}
+
+.distributor-form input:focus,
+.distributor-form select:focus,
+.distributor-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.1);
+}
+
+.distributor-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.distributor-form .btn-submit {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.distributor-form .btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 106, 0, 0.3);
+}
+
+/* Distributor Section Responsive */
+@media (max-width: 900px) {
+  .distributor-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .distributor-info h2 {
+    font-size: 2rem;
+  }
+  
+  .distributor-benefits {
+    grid-template-columns: 1fr;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .distributor-overlay {
+    padding: 60px 5%;
   }
 }
 

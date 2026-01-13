@@ -15,6 +15,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<!-- Critical CSS to prevent FOUC -->
+<style>
+  #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; }
+  .logo img { height: 60px; width: auto; }
+  .distributor-section { position: relative; background: url('images/footer-decoration.png') center/cover no-repeat; }
+  .distributor-overlay { padding: 80px 8%; background: linear-gradient(135deg, rgba(92, 42, 42, 0.75), rgba(139, 58, 58, 0.7)); }
+  .distributor-form-container { background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 20px; }
+</style>
 <!-- Netlify Identity Widget -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -44,6 +53,17 @@
 
 <!-- HERO SLIDER -->
 <section class="hero-slider">
+  <!-- Parallax Floating Elements -->
+  <div class="parallax-elements">
+    <span class="float-element leaf" data-speed="0.3">🌿</span>
+    <span class="float-element spice" data-speed="0.5">🌶️</span>
+    <span class="float-element leaf" data-speed="0.2">🍃</span>
+    <span class="float-element star" data-speed="0.4">✨</span>
+    <span class="float-element spice" data-speed="0.6">🫛</span>
+    <span class="float-element star" data-speed="0.35">⭐</span>
+    <span class="float-element leaf" data-speed="0.45">🌿</span>
+    <span class="float-element spice" data-speed="0.25">🌰</span>
+  </div>
   <div class="slide active" style="background: radial-gradient(circle at 70% 50%, #ff9f43, #ee5253);">
     <div class="hero-content">
       <h1>Royal Bikaner</h1>
@@ -298,15 +318,6 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Join the MDS Family</h2>
-  <p>Get exclusive offers and updates delivered to your inbox.</p>
-  <div class="cta-form">
-    <input placeholder="Enter your email address">
-    <button>Subscribe Now</button>
-  </div>
-</section>
 
 <!-- Footer (loaded dynamically) -->
 <div id="footer-container"></div>

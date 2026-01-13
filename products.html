@@ -13,6 +13,13 @@
 
 <link rel="stylesheet" href="style.css">
 
+<!-- Critical CSS to prevent FOUC -->
+<style>
+  #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; background: #fff; }
+  .logo img { height: 60px; width: auto; }
+  .products-hero { min-height: 350px; background: linear-gradient(135deg, #8b3a3a 0%, #5c2a2a 100%); display: flex; align-items: center; justify-content: center; padding: 120px 8% 60px; }
+</style>
+
 <!-- GSAP -->
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
