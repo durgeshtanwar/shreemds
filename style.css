@@ -1242,20 +1242,38 @@ nav.scrolled .logo img {
 .social-icon {
   width: 50px;
   height: 50px;
-  background: var(--white);
+  background: #f5f0ee;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  font-size: 1.3rem;
+  color: #5c2a2a;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
   text-decoration: none;
 }
 
 .social-icon:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+.social-icon[title="Instagram"]:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-icon[title="Facebook"]:hover {
+  background: #1877F2;
+}
+
+.social-icon[title="YouTube"]:hover {
+  background: #FF0000;
+}
+
+.social-icon[title="WhatsApp"]:hover {
+  background: #25D366;
 }
 
 /* Map Section */
@@ -1841,7 +1859,7 @@ nav.scrolled .logo img {
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(139, 58, 58, 0.6);
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s;
